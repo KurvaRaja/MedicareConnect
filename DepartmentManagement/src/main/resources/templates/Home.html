@@ -1,0 +1,38 @@
+<!DOCTYPE html><html xmlns:th="http://www.thymeleaf.org"><head><meta charset="ISO-8859-1"><title>Departments Management</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style type="text/css">
+ body 
+ { 
+	 background-image: url("images/care1.png");
+	  background-repeat: no-repeat;background-attachment: fixed; 
+	  background-size: 100% 100%; opacity: 9;
+};
+
+
+</style>
+</head>
+<body>
+	<nav class="navbar navbar-expand bg-info navbar-info"> 
+		<div class="container-fluid"> <div class="navbar-header"> 
+			<b> 
+				<span> <font color="Green" size="5">Health</font> <sub><font color="blue" size="8">+</font> <font color="Green" size="5">Care</font></sub> </span>
+		     </b>
+		</div>
+ <ul class="nav navbar-nav navbar-right"> 
+	 <li><a href="/addnewdepartment">Add Department</a></li>
+	  <li><a href="/departments">Services</a></li> 
+	  <li><a href="#" style="color:red;"><span th:text="*{username}"></span></a>
+	  <li><a href="/login">Logout</a></li> 
+	  </li> 
+	  </ul> 
+	  </div>
+	  </nav>
+	  <center><span ><font color="green" >Total Appointments:</font> <font color="red"><span th:text="*{totaltokens}"></span></font></span></center>			
+<p>
+	Health care has become one of India’s largest sectors, both in terms of revenue and employment. Health care comprises hospitals, medical devices, clinical trials, outsourcing, telemedicine, medical tourism, health insurance and medical equipment. The Indian healthcare sector is growing at a brisk pace due to its strengthening coverage, services, and increasing expenditure by public as well private players.
+India’s health care delivery system is categorized into two major components - public and private. The government, i.e., public health care system, comprises limited secondary and tertiary care institutions in key cities and focuses on providing basic health care facilities in the form of Primary Health care Centers (PHCs) in rural areas. The private sector provides majority of secondary, tertiary, and care institutions with major concentration in , tier-I, and tier-II cities.
+</p>India's competitive advantage lies in its large pool of well-trained medical professionals. India is also cost competitive compared to its peers in Asia and western countries. The cost of surgery in India is about one-tenth of that in the US or Western Europe. The low cost of medical services has resulted in a rise in the country’s medical tourism, attracting patients from across the world. Moreover, India has emerged as a hub for R&D activities for international players due to its relatively low cost of clinical research.
+
+
+</body>
+</html>

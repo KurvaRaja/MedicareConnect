@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+<meta charset="ISO-8859-1">
+
+<title>Departments</title>
+
+<link rel="stylesheet"
+
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+
+	crossorigin="anonymous">
+
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+
+
+
+	<table border="2" align="center">
+
+		<thead>
+
+			<tr>
+
+				<th>Id</th>
+
+				<th>Name</th>
+
+				<th>TotalDoctors</th>
+
+				<th>Description</th>
+
+			</tr>
+
+		</thead>
+
+
+
+		<tbody>
+
+			<tr th:each="d:${departments}">
+
+
+
+
+
+				<td th:text="${d.departmentId}"></td>
+
+				<td th:text="${d.departmentName}"></td>
+
+				<td th:text="${d.availableDoctors}"></td>
+
+				<td th:text="${d.departmentDescription}"></td>
+
+
+
+
+
+			</tr>
+
+
+
+
+
+		</tbody>
+
+	</table>
+
+
+
+</body>
+
+</html>

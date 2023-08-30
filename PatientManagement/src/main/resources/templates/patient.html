@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+	<meta charset="ISO-8859-1">
+
+	<title>Patient Management System</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+	<nav class="navbar navbar-expand bg-info navbar-info">
+
+		<div class="container-fluid">
+
+			<div class="navbar-header">
+
+				<b>
+
+					<span>
+
+						<font color="blue" size="5">Health</font>
+
+						<sub>
+							<font color="green" size="8">+</font>
+
+							<font color="blue" size="5">Care</font>
+						</sub>
+
+					</span>
+
+				</b>
+
+			</div>
+
+
+
+			<ul class="nav navbar-nav navbar-right">
+
+				<li>
+					<form th:action="@{/patients}" method="get">
+
+						<input id="txtSearch" type="text" name="name" required="required" placeholder="search Here">
+
+						<button type="submit" class="btn btn-primary btn-sm"> Search</button>
+
+						<a th:href="@{/patients}" class="btn btn-warning btn-sm">Clear</a>
+
+
+
+					</form>
+
+				</li>
+
+
+
+
+
+
+
+			</ul>
+
+		</div>
+
+	</nav>
+
+	<div>
+
+
+
+		<table border="2" align="center">
+
+			<thead>
+
+				<tr>
+
+					<th> TokenId </th>
+
+					<th>PatientFirstName </th>
+
+					<th>PatientLastName </th>
+
+
+
+				</tr>
+
+			</thead>
+
+
+
+			<tbody>
+
+				<tr th:each="patient:${allPatient}">
+
+					<td th:text="${patient.tokenId}"></td>
+
+					<td th:text="${patient.firstname}"></td>
+
+					<td th:text="${patient.lastname}"></td>
+
+
+
+
+
+
+
+
+
+				</tr>
+
+			</tbody>
+
+
+
+		</table>
+
+	</div>
+
+	<div align="center">
+
+		<h4 th:text="*{noPatientFound}"></h4>
+
+
+
+
+
+	</div>
+
+
+
+
+
+</body>
+
+</html>
